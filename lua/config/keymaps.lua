@@ -12,3 +12,12 @@ vim.keymap.set({ "n", "v" }, "<leader>ai", "<cmd>CodeCompanion<cr>", { desc = "I
 vim.keymap.set("n", "<leader>ae", "<cmd>CodeCompanion /explain<cr>", { desc = "Explain Code" })
 vim.keymap.set("n", "<leader>at", "<cmd>CodeCompanion /tests<cr>", { desc = "Generate Tests" })
 vim.keymap.set("n", "<leader>af", "<cmd>CodeCompanion /fix<cr>", { desc = "Fix Code" })
+
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+
+-- Go to buffer by number (like VS Code Cmd+1, Cmd+2...)
+for i = 1, 9 do
+  vim.keymap.set("n", "<leader>" .. i, function()
+    require("bufferline").go_to(i, true)
+  end, { desc = "Go to Buffer " .. i })
+end
