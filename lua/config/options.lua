@@ -7,10 +7,10 @@ vim.opt.relativenumber = false
 
 vim.g.autoformat = false
 
+vim.opt.clipboard = "unnamedplus"
+
 -- OSC52 clipboard for SSH (Ghostty + LazyVim)
 if vim.env.SSH_TTY then
-  vim.opt.clipboard = "unnamedplus"
-
   vim.g.clipboard = {
     name = "OSC 52",
     copy = {
