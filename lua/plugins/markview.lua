@@ -1,8 +1,8 @@
 -- For `plugins/markview.lua` users.
 return {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
-
-    -- Completion for `blink.cmp`
-    -- dependencies = { "saghen/blink.cmp" },
-};
+  "OXY2DEV/markview.nvim",
+  lazy = false,
+  ft = { "markdown"},
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  opts = {},
+}
