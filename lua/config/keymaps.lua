@@ -21,3 +21,8 @@ for i = 1, 9 do
     require("bufferline").go_to(i, true)
   end, { desc = "Go to Buffer " .. i })
 end
+
+-- Super fast branch switching
+vim.keymap.set("n", "gc", function()
+  Snacks.picker.git_branches()
+end, { desc = "Git Branches" })
