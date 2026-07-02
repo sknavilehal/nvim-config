@@ -28,5 +28,19 @@ return {
         },
       },
     },
+
+    -- Keymaps for CodeCompanion (moved here from keymaps.lua)
+    keys = {
+      -- AI shortcuts (feels like Cursor)
+      { "<leader>aa", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "AI Actions" },
+      { "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", mode = { "n", "v" }, desc = "AI Chat" },
+      { "<leader>aa", "<cmd>CodeCompanionChat Add<cr>", mode = "v", desc = "Add selection to Chat" },
+      { "<leader>ai", "<cmd>CodeCompanion<cr>", mode = { "n", "v" }, desc = "Inline AI" },
+
+      -- Common prompt shortcuts
+      { "<leader>ae", "<cmd>CodeCompanion /explain<cr>", mode = "n", desc = "Explain Code" },
+      { "<leader>at", "<cmd>CodeCompanion /tests<cr>", mode = "n", desc = "Generate Tests" },
+      { "<leader>af", "<cmd>CodeCompanion /fix<cr>", mode = "n", desc = "Fix Code" },
+    },
   },
 }
